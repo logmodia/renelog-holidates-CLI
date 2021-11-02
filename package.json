@@ -1,10 +1,10 @@
 {
-  "name": "country-holiday-viewer-cli",
+  "name": "@logmodia/country-holidays-viewer-cli",
   "version": "1.0.0",
   "description": "show countries holiday dates",
   "main": "index.js",
   "bin": {
-    "mychv": "index.js"
+    "chv": "index.js"
   },
   "type": "module",
   "scripts": {
@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/logmodia/renelog-holidates-CLI.git"
   },
+  "keywords": ["holiday","holidays viewer","holidays","Public Holiday"],
   "author": "René Logala Modia <renemodia2@gmail.com>",
   "license": "ISC",
   "bugs": {
