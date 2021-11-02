@@ -1,6 +1,6 @@
 {
   "name": "@logmodia/country-holidays-viewer-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Display a list of holiday dates of a given country. To run : $chv [name of the country]",
   "main": "index.js",
   "bin": {

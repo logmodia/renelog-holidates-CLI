@@ -6,20 +6,20 @@ import countries from 'country-list';
 import ora from 'ora';
 import chalk from 'chalk';
 
-const spinner = ora(`Loading ${chalk.red('Loading...')}`).start();
 
 var myArgs = process.argv.slice(2); //parse arguments from the terminal by skiping node default arguments (2)
 if (myArgs.length !== 0){
-
-
-    const countryHolidates = (countryName)=>{
     
+    
+    const countryHolidates = (countryName)=>{
+        
         const d = new Date();
         let year = d.getFullYear();
-    
+        
         let countryCode = countries.getCode(`${countryName}`)
         
         if (countryCode != undefined){
+            const spinner = ora(`Loading ${chalk.red('Loading...')}`).start();
 
             axios.get(`https://date.nager.at/api/v3/publicholidays/${year}/${countryCode}`)
             .then(function (response) {
@@ -45,7 +45,7 @@ if (myArgs.length !== 0){
         
         }else {
             console.log()
-            console.error("You have entred a wrong country name");
+            console.error(chalk.red("Error!\nYou have entred a wrong country name"));
             console.log()
         
         }
@@ -55,6 +55,8 @@ if (myArgs.length !== 0){
 
 }
 else{
-    console.log("ERROR\nYou did not enter a country name")
+    
+    console.log(chalk.red(`ERROR!\nYou did not enter a country name`))
+    
 }
 

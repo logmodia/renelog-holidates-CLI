@@ -4,7 +4,7 @@ This package helps to show the list of holiday dates of a given country
 
 **Install**
 
-npm i @logmodia/country-holidays-viewer-cli
+npm i -g @logmodia/country-holidays-viewer-cli
 
 **To run**
 
